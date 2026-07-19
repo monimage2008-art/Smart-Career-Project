@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Career Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Smart Career Recommendation System</h1>
+
+<form method="POST">
+    <input type="text" name="skill" id="skill" list="skills" placeholder="Enter your skill" required>
+
+<datalist id="skills">
+    <option value="Python">
+    <option value="Java">
+    <option value="HTML CSS JavaScript">
+    <option value="Machine Learning">
+    <option value="Power BI">
+    <option value="Excel">
+    <option value="React">
+    <option value="Android">
+    <option value="AWS">
+    <option value="Cyber Security">
+    <option value="Networking">
+    <option value="DevOps">
+    <option value="SQL">
+    <option value="Tableau">
+    <option value="TensorFlow">
+    <option value="PyTorch">
+    <option value="Linux">
+    <option value="Git">
+    <option value="Docker">
+    <option value="Kubernetes">
+    <option value="UI UX">
+    <option value="Node.js">
+    <option value="Figma">
+    <option value="Photoshop">
+    <option value="Canva">
+    <option value="Django">
+    <option value="Flask">
+    <option value="Java Spring">
+    <option value="MongoDB">
+    <option value="C#">
+    <option value="PHP">
+</datalist>
+    <button type="submit">Recommend Career</button>
+</form>
+
+{% if tables %}
+    {{ tables[0]|safe }}
+{% endif %}
+
+</body>
+</html>
